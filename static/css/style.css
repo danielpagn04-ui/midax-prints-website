@@ -770,3 +770,20 @@ p {
     }
 }
 
+
+/* HEADER LOGO — SLIGHTLY BOLDER */
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    transform: scale(1.08);
+    transform-origin: left center;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 135px;
+        transform: scale(1.05);
+    }
+}
+
