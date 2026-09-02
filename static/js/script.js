@@ -21,3 +21,32 @@ if (menuToggle && nav) {
         });
     });
 }
+
+
+/* =========================
+   GALLERY CATEGORY ACCORDION
+========================= */
+
+const galleryCategories = document.querySelectorAll('.gallery-category');
+
+galleryCategories.forEach(category => {
+
+    const toggle = category.querySelector('.gallery-category-toggle');
+
+    if (toggle) {
+
+        toggle.addEventListener('click', () => {
+
+            galleryCategories.forEach(otherCategory => {
+                if (otherCategory !== category) {
+                    otherCategory.classList.remove('active');
+                }
+            });
+
+            category.classList.toggle('active');
+
+        });
+
+    }
+
+});
