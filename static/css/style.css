@@ -903,3 +903,44 @@ p {
     transform: scale(1.03);
 }
 
+/* =========================
+   ABOUT IMAGE — WHITE EDGE BLEND
+========================= */
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: 0;
+    height: 32%;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.05) 15%,
+        rgba(255, 255, 255, 0.18) 35%,
+        rgba(255, 255, 255, 0.42) 55%,
+        rgba(255, 255, 255, 0.72) 73%,
+        rgba(255, 255, 255, 0.92) 88%,
+        #ffffff 100%
+    );
+}
+
+
+/* SLIGHTLY BOLDER HERO TAG */
+.hero-tag {
+    font-weight: 700;
+}
+
+
+/* HERO TAG — A LITTLE BOLDER */
+.hero-tag {
+    font-weight: 750;
+}
+
