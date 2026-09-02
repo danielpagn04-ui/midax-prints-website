@@ -874,3 +874,32 @@ p {
     }
 
 }
+
+/* =========================
+   ABOUT IMAGE ANIMATION
+========================= */
+
+.about-image img {
+    animation: aboutFloat 4s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes aboutFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Slightly stronger interaction on hover */
+.about-image img:hover {
+    transform: scale(1.03);
+}
+
