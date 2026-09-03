@@ -19,6 +19,23 @@ def sublimation_tote_bag():
 
 
 
+
+
+@app.route("/products/feather-banner")
+def feather_banner():
+    return render_template("feather-banner.html")
+
+
+@app.route("/products/branded-tshirt")
+def branded_tshirt():
+    return render_template("branded-tshirt.html")
+
+
+
+@app.route("/products/rollup-banner")
+def rollup_banner():
+    return render_template("rollup-banner.html")
+
 @app.route("/products/backdrop-banner")
 def backdrop_banner():
     return render_template("backdrop.html")

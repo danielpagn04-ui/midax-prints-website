@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Branded T-shirts from Midax Prints House Services. Quality custom-branded T-shirts suitable for businesses, events, schools, organisations and promotional campaigns.">
+
+    <title>Branded T-shirts | Midax Prints House Services</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+
+        <a href="/" class="logo-link">
+            <img
+                src="{{ url_for('static', filename='images/midax-logo.png') }}"
+                alt="Midax Prints House Services Logo"
+                class="logo">
+        </a>
+
+        <a href="/" class="product-back-link">
+            ← Back to Home
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="product-page">
+
+    <div class="container">
+
+        <div class="product-detail-card">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-detail-image">
+
+                <div class="product-image-frame">
+
+                    <img
+                        src="{{ url_for('static', filename='images/products/branded-tshirt/branded-tshirt.png') }}"
+                        alt="Branded T-shirts">
+
+                </div>
+
+                <div class="product-image-caption">
+                    <span>QUALITY APPAREL</span>
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-detail-info">
+
+                <span class="product-detail-label">
+                    APPAREL & BRANDING
+                </span>
+
+                <h1>Branded T-shirts</h1>
+
+                <p class="product-detail-description">
+                    Quality T-shirts professionally branded for businesses,
+                    events, schools, organisations, promotional campaigns
+                    and special occasions. A practical and attractive way
+                    to give your team or event a consistent, professional
+                    branded appearance.
+                </p>
+
+
+                <!-- SPECIFICATIONS -->
+
+                <div class="product-info-box">
+
+                    <h2>Specifications</h2>
+
+                    <div class="info-row">
+                        <span>Product</span>
+                        <strong>Quality T-shirt</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Branding</span>
+                        <strong>Custom branded design</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Use</span>
+                        <strong>Business, events, schools & promotions</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- PRICING -->
+
+                <div class="product-info-box pricing-box">
+
+                    <h2>Pricing</h2>
+
+                    <div class="price-main">
+                        ₦15,000
+                        <span>per T-shirt</span>
+                    </div>
+
+                    <p>
+                        Price is ₦15,000 per T-shirt. Discounts are available for
+                        orders above 10 T-shirts. Final pricing will be
+                        confirmed based on quantity and customization.
+                    </p>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="product-info-box">
+
+                    <h2>Delivery</h2>
+
+                    <div class="delivery-row">
+                        <strong>Within Abuja</strong>
+                        <span>3–5 working days</span>
+                    </div>
+
+                    <div class="delivery-row">
+                        <strong>Other states in Nigeria</strong>
+                        <span>5–7 working days</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER FORM -->
+
+                <div class="order-box">
+
+                    <div class="order-heading">
+
+                        <span class="order-heading-icon">✦</span>
+
+                        <div>
+                            <h2>Order This Product</h2>
+                            <p>Send your order directly to WhatsApp.</p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="productOrderForm">
+
+                        <div class="form-group">
+
+                            <label for="quantity">
+                                Quantity
+                            </label>
+
+                            <select id="quantity" name="quantity">
+
+                                <option value="1 T-shirt">
+                                    1 T-shirt
+                                </option>
+
+                                <option value="5 T-shirts">
+                                    5 T-shirts
+                                </option>
+
+                                <option value="10 T-shirts">
+                                    10 T-shirts
+                                </option>
+
+                                <option value="11–20 T-shirts">
+                                    11–20 T-shirts
+                                </option>
+
+                                <option value="21–50 T-shirts">
+                                    21–50 T-shirts
+                                </option>
+
+                                <option value="Above 50 T-shirts">
+                                    Above 50 T-shirts
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter your phone number"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerMessage">
+                                Anything else we should know?
+                            </label>
+
+                            <textarea
+                                id="customerMessage"
+                                rows="4"
+                                placeholder="Tell us about your design, sizes, event, deadline or other requirements"></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="product-whatsapp-button">
+
+                            <span>Order Now on WhatsApp</span>
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="product-footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Midax Prints House Services.
+            Quality Printing & Branding Solutions.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document
+    .getElementById("productOrderForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const quantity =
+            document.getElementById("quantity").value;
+
+        const name =
+            document.getElementById("customerName").value;
+
+        const phone =
+            document.getElementById("customerPhone").value;
+
+        const message =
+            document.getElementById("customerMessage").value;
+
+
+        const whatsappMessage =
+`Hello Midax Prints House Services,
+
+I would like to order Branded T-shirts.
+
+Quantity: ${quantity}
+Name: ${name}
+Phone Number: ${phone}
+
+Additional requirements:
+${message || "None"}
+
+Please confirm the final price and production details. Thank you.`;
+
+
+        const whatsappURL =
+            "https://wa.me/2348038195051?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
