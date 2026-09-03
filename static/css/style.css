@@ -2521,57 +2521,46 @@ p {
 }
 
 
-
-
 /* =========================================
-   MIDAX HOMEPAGE — CLEAN DESKTOP LAYOUT
-   Mobile layout remains unchanged
+   MIDAX HOMEPAGE - DESKTOP POLISH
    ========================================= */
 
 @media (min-width: 851px) {
 
-    .hero-layout {
-        width: min(92%, 1350px);
-        max-width: 1350px;
-        margin: 0 auto;
+    .hero {
         min-height: calc(100vh - 78px);
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(430px, 0.85fr);
-        align-items: center;
+    }
+
+    .hero-layout {
+        width: min(90%, 1180px);
+        grid-template-columns: 1fr 0.9fr;
         gap: 70px;
-        padding: 50px 0 60px;
+        padding: 55px 0;
     }
 
     .hero-content {
-        width: 100%;
-        max-width: 680px;
-        margin: 0 auto;
+        max-width: 610px;
     }
 
     .hero h1 {
-        max-width: 680px;
-        font-size: clamp(3.2rem, 4.2vw, 4.8rem);
-        line-height: 1.05;
-        margin-bottom: 22px;
+        max-width: 620px;
+        font-size: clamp(3.2rem, 4.5vw, 4.5rem);
+        line-height: 1.06;
+        margin-bottom: 20px;
     }
 
     .hero-description {
-        max-width: 610px;
-        font-size: 1.08rem;
+        max-width: 540px;
+        font-size: 1.05rem;
         line-height: 1.75;
-        margin-bottom: 30px;
+        margin-bottom: 28px;
     }
 
     .hero-actions {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
         gap: 16px;
     }
 
     .hero-product {
-        width: 100%;
-        min-height: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2579,275 +2568,85 @@ p {
 
     .product-card {
         width: 100%;
-        max-width: 520px;
-        min-height: 540px;
-        margin: 0 auto;
+        max-width: 470px;
+        min-height: 500px;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     .product-image-area {
-        min-height: 350px;
+        min-height: 330px;
     }
 
     .product-image-area img {
-        width: auto;
         max-width: 92%;
-        max-height: 330px;
+        max-height: 315px;
         object-fit: contain;
     }
 
     .product-card-bottom {
-        padding: 22px 26px;
-    }
-}
-
-/* =========================================
-   FINAL HOMEPAGE DESKTOP WIDTH FIX
-   ========================================= */
-
-@media (min-width: 851px) {
-
-    #home .hero-layout {
-        width: min(92%, 1350px);
-        max-width: 1350px;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 20px 24px;
     }
 
 }
 
 
 /* =========================================
-   MIDAX HOMEPAGE — FINAL RESPONSIVE DESIGN
+   WIDE DESKTOP HERO
+   Keeps mobile design unchanged
    ========================================= */
 
-/* DESKTOP */
 @media (min-width: 851px) {
 
-    #home .hero-layout {
+    .hero-layout {
         width: 94%;
-        max-width: 1500px;
-        min-height: calc(100vh - 78px);
-        margin: 0 auto;
+        max-width: 1450px;
+        grid-template-columns: minmax(0, 1.05fr) minmax(430px, 0.95fr);
+        gap: 80px;
         padding: 45px 0 55px;
-
-        display: grid;
-        grid-template-columns: 1.08fr 0.92fr;
-        align-items: center;
-        gap: 70px;
     }
 
-    #home .hero-content {
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero h1 {
+        max-width: 700px;
+        font-size: clamp(3.4rem, 4.3vw, 5rem);
+        line-height: 1.03;
+    }
+
+    .hero-description {
+        max-width: 620px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .hero-product {
         width: 100%;
-        max-width: 760px;
-    }
-
-    #home .hero-badge {
-        font-size: 0.85rem;
-        padding: 10px 18px;
-        margin-bottom: 24px;
-    }
-
-    #home .hero h1 {
-        max-width: 760px;
-        font-size: clamp(3.8rem, 5vw, 5.8rem);
-        line-height: 1.02;
-        letter-spacing: -2.5px;
-        margin-bottom: 25px;
-    }
-
-    #home .hero-description {
-        max-width: 680px;
-        font-size: 1.2rem;
-        line-height: 1.75;
-        margin-bottom: 35px;
-    }
-
-    #home .hero-actions {
-        gap: 18px;
-    }
-
-    #home .hero-quote-btn {
-        min-height: 62px;
-        padding: 0 30px;
-        font-size: 1.05rem;
-    }
-
-    #home .hero-order-card {
-        min-height: 62px;
-        padding: 9px 17px 9px 11px;
-    }
-
-    #home .order-icon {
-        width: 44px;
-        height: 44px;
-    }
-
-    #home .order-text strong {
-        font-size: 1rem;
-    }
-
-    #home .hero-product {
-        width: 100%;
-        min-height: 580px;
-
         display: flex;
+        justify-content: flex-end;
         align-items: center;
-        justify-content: center;
     }
 
-    #home .product-glow {
-        width: 500px;
-        height: 500px;
-    }
-
-    #home .product-card {
+    .product-card {
         width: 100%;
-        max-width: 580px;
-        min-height: 590px;
-        padding: 24px;
-        border-radius: 30px;
+        max-width: 560px;
+        min-height: 560px;
+        margin: 0;
     }
 
-    #home .product-image-area {
-        min-height: 410px;
+    .product-image-area {
+        min-height: 370px;
     }
 
-    #home .product-image-area img {
-        width: auto;
+    .product-image-area img {
         max-width: 94%;
-        max-height: 390px;
+        max-height: 350px;
         object-fit: contain;
     }
 
-    #home .product-card-bottom {
-        padding: 24px 4px 4px;
-    }
-
-    #home .product-card-bottom strong {
-        font-size: 1rem;
-    }
-
-    #home .product-card-bottom span {
-        font-size: 0.75rem;
+    .product-card-bottom {
+        padding: 24px 28px;
     }
 }
-
-/* =========================================
-   MIDAX HOMEPAGE — DESKTOP MODE SCALE FIX
-   ========================================= */
-
-@media (min-width: 851px) {
-
-    #home .hero-layout {
-        width: 100%;
-        max-width: none;
-        min-height: calc(100vh - 78px);
-        padding: 45px 5vw 55px;
-
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 4vw;
-        align-items: center;
-    }
-
-    #home .hero-content {
-        width: 100%;
-        max-width: none;
-    }
-
-    #home .hero-badge {
-        font-size: 0.95rem;
-        padding: 11px 20px;
-        margin-bottom: 25px;
-    }
-
-    #home .hero h1 {
-        width: 100%;
-        max-width: none;
-        font-size: clamp(4rem, 6vw, 6.5rem);
-        line-height: 1.02;
-        letter-spacing: -3px;
-        margin-bottom: 25px;
-    }
-
-    #home .hero-description {
-        width: 100%;
-        max-width: 760px;
-        font-size: 1.3rem;
-        line-height: 1.7;
-        margin-bottom: 35px;
-    }
-
-    #home .hero-actions {
-        gap: 20px;
-    }
-
-    #home .hero-quote-btn {
-        min-height: 66px;
-        padding: 0 34px;
-        font-size: 1.1rem;
-    }
-
-    #home .hero-order-card {
-        min-height: 66px;
-        padding: 10px 20px 10px 12px;
-    }
-
-    #home .order-icon {
-        width: 48px;
-        height: 48px;
-    }
-
-    #home .order-text strong {
-        font-size: 1.05rem;
-    }
-
-    #home .order-text small {
-        font-size: 0.85rem;
-    }
-
-    #home .hero-product {
-        width: 100%;
-        min-height: 620px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #home .product-glow {
-        width: 560px;
-        height: 560px;
-    }
-
-    #home .product-card {
-        width: 100%;
-        max-width: 650px;
-        min-height: 620px;
-        padding: 26px;
-        border-radius: 32px;
-    }
-
-    #home .product-image-area {
-        min-height: 450px;
-    }
-
-    #home .product-image-area img {
-        width: auto;
-        max-width: 100%;
-        max-height: 430px;
-        object-fit: contain;
-    }
-
-    #home .product-card-bottom {
-        padding: 25px 5px 5px;
-    }
-
-    #home .product-card-bottom strong {
-        font-size: 1.1rem;
-    }
-
-    #home .product-card-bottom span {
-        font-size: 0.85rem;
-    }
-}
-
