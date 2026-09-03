@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="10 ft × 10 ft mounted backdrop banner by Midax Prints House Services. Professional flex banner printing and wooden 3D frame mounting for weddings, conferences, church programmes and events.">
+
+    <title>Backdrop Banner – 10 ft × 10 ft | Midax Prints House Services</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+
+    <nav class="navbar container">
+
+        <a href="/" class="logo-link">
+            <img
+                src="{{ url_for('static', filename='images/midax-logo.png') }}"
+                alt="Midax Prints House Services Logo"
+                class="logo">
+        </a>
+
+        <a href="/products" class="product-back-link">
+            ← Back to Products
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="product-page">
+
+    <div class="container">
+
+        <div class="product-detail-card">
+
+
+            <!-- =====================================
+                 PRODUCT IMAGE GALLERY
+                 ===================================== -->
+
+            <div class="product-detail-image">
+
+                <div class="product-image-frame">
+
+                    <img
+                        id="backdropMainImage"
+                        src="{{ url_for('static', filename='images/products/backdrop-banner/backdrop.jpg') }}"
+                        alt="10 ft × 10 ft Mounted Backdrop Banner">
+
+                </div>
+
+
+                <div class="backdrop-gallery">
+
+                    <button
+                        type="button"
+                        class="backdrop-thumb active"
+                        onclick="changeBackdropImage(this)">
+
+                        <img
+                            src="{{ url_for('static', filename='images/products/backdrop-banner/backdrop.jpg') }}"
+                            alt="Backdrop Banner Main View">
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="backdrop-thumb"
+                        onclick="changeBackdropImage(this)">
+
+                        <img
+                            src="{{ url_for('static', filename='images/products/backdrop-banner/backdrop-2.jpg') }}"
+                            alt="Backdrop Banner Additional View">
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-image-caption">
+                    <span>EVENT BACKDROP</span>
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT INFORMATION
+                 ===================================== -->
+
+            <div class="product-detail-info">
+
+                <span class="product-detail-label">
+                    EVENT & BRANDING
+                </span>
+
+
+                <h1>
+                    Backdrop Banner – 10 ft × 10 ft Mounted
+                </h1>
+
+
+                <p class="product-detail-description">
+
+                    Create an impressive and professional backdrop
+                    for your special occasions and branded events.
+                    Our backdrop banner features a high-quality
+                    printed flex banner professionally stretched
+                    and securely mounted on a sturdy wooden 3D frame.
+
+                </p>
+
+
+                <p class="product-detail-description">
+
+                    Perfect for weddings, conferences, church
+                    programmes, corporate events, product launches,
+                    photo sessions and other occasions where a
+                    strong, attractive free-standing branded wall
+                    is needed.
+
+                </p>
+
+
+
+                <!-- SPECIFICATIONS -->
+
+                <div class="product-info-box">
+
+                    <h2>Specifications</h2>
+
+                    <div class="info-row">
+                        <span>Size</span>
+                        <strong>10 ft × 10 ft</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Material</span>
+                        <strong>High-quality flex banner</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Frame</span>
+                        <strong>Sturdy wooden 3D frame</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Finishing</span>
+                        <strong>Professionally stretched & mounted</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Use</span>
+                        <strong>Events, branding & photography</strong>
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRICING -->
+
+                <div class="product-info-box pricing-box">
+
+                    <h2>Pricing</h2>
+
+                    <div class="price-main">
+                        ₦270,000
+                        <span>per set</span>
+                    </div>
+
+                    <p>
+                        Price includes the printed flex banner and
+                        wooden frame mounting. Final artwork and
+                        customization requirements will be confirmed
+                        before production.
+                    </p>
+
+                </div>
+
+
+
+                <!-- DELIVERY -->
+
+                <div class="product-info-box">
+
+                    <h2>Delivery</h2>
+
+                    <div class="delivery-row">
+                        <strong>Within Abuja</strong>
+                        <span>3–5 working days</span>
+                    </div>
+
+                    <div class="delivery-row">
+                        <strong>Other states in Nigeria</strong>
+                        <span>5–7 working days</span>
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     ORDER FORM
+                     ===================================== -->
+
+                <div class="order-box">
+
+                    <div class="order-heading">
+
+                        <span class="order-heading-icon">✦</span>
+
+                        <div>
+                            <h2>Order This Product</h2>
+                            <p>Send your order directly to WhatsApp.</p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="backdropOrderForm">
+
+
+                        <div class="quantity-control">
+
+                            <label for="quantity">
+                                Quantity
+                            </label>
+
+                            <select id="quantity" name="quantity">
+
+                                <option value="1 set">
+                                    1 set
+                                </option>
+
+                                <option value="2 sets">
+                                    2 sets
+                                </option>
+
+                                <option value="3 sets">
+                                    3 sets
+                                </option>
+
+                                <option value="4 sets">
+                                    4 sets
+                                </option>
+
+                                <option value="5 sets">
+                                    5 sets
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Enter your full name"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter your phone number"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="customerMessage">
+                                Additional Details
+                            </label>
+
+                            <textarea
+                                id="customerMessage"
+                                rows="4"
+                                placeholder="Tell us about your event, artwork, date or special requirements"></textarea>
+
+                        </div>
+
+
+
+                        <button
+                            type="submit"
+                            class="btn-primary order-submit">
+
+                            Order Now
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<script>
+
+/* =========================================
+   BACKDROP IMAGE GALLERY
+   ========================================= */
+
+function changeBackdropImage(thumb) {
+
+    const mainImage =
+        document.getElementById("backdropMainImage");
+
+    const selectedImage =
+        thumb.querySelector("img");
+
+    mainImage.src = selectedImage.src;
+
+    document
+        .querySelectorAll(".backdrop-thumb")
+        .forEach(function(item) {
+
+            item.classList.remove("active");
+
+        });
+
+    thumb.classList.add("active");
+}
+
+
+
+/* =========================================
+   WHATSAPP ORDER
+   ========================================= */
+
+document
+    .getElementById("backdropOrderForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const quantity =
+            document.getElementById("quantity").value;
+
+        const name =
+            document.getElementById("customerName").value;
+
+        const phone =
+            document.getElementById("customerPhone").value;
+
+        const message =
+            document.getElementById("customerMessage").value;
+
+
+        const whatsappMessage =
+`Hello Midax Prints House Services,
+
+I would like to order:
+
+Product: Backdrop Banner – 10 ft × 10 ft Mounted
+Quantity: ${quantity}
+Price: ₦270,000 per set
+
+Customer Name: ${name}
+Phone Number: ${phone}
+
+Additional Details:
+${message}
+
+Please confirm availability, production requirements and delivery details.
+
+Thank you.`;
+
+
+        const whatsappURL =
+            "https://wa.me/2348038195051?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+</script>
+
+
+</body>
+</html>

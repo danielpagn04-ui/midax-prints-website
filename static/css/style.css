@@ -944,3 +944,1910 @@ p {
     font-weight: 750;
 }
 
+
+/* =========================
+   MOBILE NAVIGATION FIX
+========================= */
+
+@media (max-width: 899px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1002;
+        padding: 8px 10px;
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--white);
+        padding: 15px 20px 20px;
+        margin: 0;
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 14px 5px;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .nav-links li {
+        margin: 0 0 0 25px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   MIDAX PREMIUM VISUAL UPGRADE
+===================================================== */
+
+/* HEADER */
+.header {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 63, 115, 0.10);
+}
+
+.navbar {
+    min-height: 78px;
+}
+
+.logo {
+    width: 150px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.nav-links a {
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: calc(100vh - 78px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 90% 20%, rgba(26, 143, 227, 0.18), transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(0, 102, 179, 0.10), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f2f8fd 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    top: -130px;
+    border-radius: 50%;
+    background: rgba(0, 102, 179, 0.08);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: -130px;
+    bottom: -130px;
+    border-radius: 50%;
+    background: rgba(26, 143, 227, 0.08);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 0;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    max-width: 780px;
+    font-size: clamp(2.7rem, 7vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--deep-blue);
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary-blue);
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ORDER NOW BUTTON */
+.order-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    padding: 14px 27px;
+    border-radius: 8px;
+    background: var(--primary-blue);
+    color: #ffffff !important;
+    font-weight: 800;
+    border: 2px solid var(--primary-blue);
+    box-shadow: 0 10px 25px rgba(0, 102, 179, 0.25);
+    transition: all 0.25s ease;
+}
+
+.order-btn:hover {
+    background: var(--deep-blue);
+    border-color: var(--deep-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0, 63, 115, 0.28);
+}
+
+/* SECONDARY HERO BUTTON */
+.hero-buttons .btn-primary {
+    border-radius: 8px;
+    padding: 14px 27px;
+    font-weight: 800;
+}
+
+/* MOBILE HERO */
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 65px 0 75px;
+    }
+
+    .hero h1 {
+        font-size: 2.65rem;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .order-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
+
+.section h2 {
+    color: var(--deep-blue);
+    font-weight: 800;
+}
+
+.section-tag {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* =====================================================
+   SERVICE CARDS
+===================================================== */
+
+.service-card,
+.why-card,
+.gallery-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover,
+.why-card:hover,
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 63, 115, 0.12);
+}
+
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+
+@media (max-width: 899px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        padding: 8px 10px;
+        color: var(--deep-blue);
+    }
+
+    .nav-links {
+        top: 78px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+/* =========================================
+   MIDAX HERO — CLEAN PRODUCT SHOWCASE
+========================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 78px);
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(26,143,227,.16), transparent 30%),
+        radial-gradient(circle at 15% 90%, rgba(0,102,179,.10), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f3f8fc 100%);
+}
+
+.hero-layout {
+    width: min(92%, 1150px);
+    min-height: calc(100vh - 78px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 55px;
+    padding: 70px 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 16px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    background: rgba(0,102,179,.09);
+    border: 1px solid rgba(0,102,179,.15);
+    color: var(--primary-blue);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.hero h1 {
+    max-width: 680px;
+    margin-bottom: 22px;
+    color: var(--deep-blue);
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1.04;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary-blue);
+}
+
+.hero-description {
+    max-width: 570px;
+    margin-bottom: 32px;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+/* HERO BUTTON AREA */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-quote-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 25px;
+    border-radius: 12px;
+    background: var(--deep-blue);
+    color: #ffffff !important;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(0,63,115,.20);
+    transition: .25s ease;
+}
+
+.hero-quote-btn:hover {
+    transform: translateY(-3px);
+    background: var(--primary-blue);
+}
+
+/* CUTE ORDER CARD */
+
+.hero-order-card {
+    min-height: 56px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 14px 8px 10px;
+    border: 1px solid rgba(0,102,179,.16);
+    border-radius: 15px;
+    background: rgba(255,255,255,.92);
+    color: var(--deep-blue) !important;
+    box-shadow: 0 10px 30px rgba(0,63,115,.12);
+    transition: .25s ease;
+}
+
+.hero-order-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,63,115,.18);
+    border-color: var(--primary-blue);
+}
+
+.order-icon {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    background: var(--primary-blue);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.order-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.order-text strong {
+    font-size: .95rem;
+}
+
+.order-text small {
+    margin-top: 4px;
+    color: #718096;
+    font-size: .67rem;
+}
+
+.order-arrow {
+    margin-left: 5px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* PRODUCT SHOWCASE */
+
+.hero-product {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-glow {
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    background: rgba(26,143,227,.13);
+    filter: blur(3px);
+}
+
+.product-card {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 430px);
+    min-height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 28px;
+    background: rgba(255,255,255,.72);
+    backdrop-filter: blur(14px);
+    box-shadow:
+        0 25px 60px rgba(0,63,115,.16),
+        inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.product-card-top,
+.product-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card-top {
+    color: var(--primary-blue);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.product-image-area {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-image-area img {
+    max-height: 330px;
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 20px rgba(0,0,0,.14));
+    transition: .3s ease;
+}
+
+.product-card:hover .product-image-area img {
+    transform: translateY(-7px) scale(1.02);
+}
+
+.product-card-bottom {
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,63,115,.08);
+}
+
+.product-card-bottom strong {
+    color: var(--deep-blue);
+    font-size: .9rem;
+}
+
+.product-card-bottom span {
+    color: #718096;
+    font-size: .68rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 55px 0 70px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(2.6rem, 10vw, 4rem);
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-product {
+        min-height: 390px;
+    }
+
+    .product-card {
+        min-height: 390px;
+        max-width: 370px;
+    }
+
+    .product-image-area {
+        min-height: 240px;
+    }
+
+    .product-image-area img {
+        max-height: 240px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .hero-layout {
+        width: min(92%, 420px);
+        padding: 45px 0 55px;
+    }
+
+    .hero-badge {
+        font-size: .68rem;
+        letter-spacing: 1px;
+    }
+
+    .hero h1 {
+        font-size: 2.55rem;
+        letter-spacing: -1.3px;
+    }
+
+    .hero-description {
+        font-size: .98rem;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-quote-btn,
+    .hero-order-card {
+        width: 100%;
+    }
+
+    .hero-order-card {
+        justify-content: center;
+    }
+
+    .hero-product {
+        min-height: 350px;
+    }
+
+    .product-card {
+        min-height: 350px;
+        border-radius: 23px;
+    }
+
+    .product-image-area {
+        min-height: 205px;
+    }
+
+    .product-image-area img {
+        max-height: 205px;
+    }
+}
+
+
+/* =========================================
+   MIDAX PRODUCT CATALOGUE
+========================================= */
+
+.products-section {
+    background: #f7f9fc;
+    position: relative;
+}
+
+.products-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.products-heading h2 {
+    color: var(--deep-blue);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+}
+
+.products-heading h2 span {
+    color: var(--primary-blue);
+}
+
+.products-intro {
+    max-width: 600px;
+    margin: auto;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+/* PRODUCT GRID */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* PRODUCT CARD */
+
+.product-item {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid rgba(0,63,115,.08);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(0,63,115,.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,63,115,.15);
+}
+
+/* IMAGE CONTAINER */
+
+.product-item-image {
+    height: 250px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(135deg, #eef7fd, #ffffff);
+    overflow: hidden;
+}
+
+.product-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .35s ease;
+}
+
+.product-item:hover .product-item-image img {
+    transform: scale(1.05);
+}
+
+/* PRODUCT INFORMATION */
+
+.product-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 23px;
+}
+
+.product-label {
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 9px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: rgba(0,102,179,.08);
+    color: var(--primary-blue);
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.product-item-content h3 {
+    margin-bottom: 10px;
+    color: var(--deep-blue);
+    font-size: 1.35rem;
+}
+
+.product-item-content p {
+    margin-bottom: 22px;
+    color: var(--text);
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
+/* CARD FOOTER */
+
+.product-item-footer {
+    margin-top: auto;
+    padding-top: 17px;
+    border-top: 1px solid rgba(0,63,115,.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.product-quality {
+    color: #718096;
+    font-size: .72rem;
+    font-weight: 700;
+}
+
+/* ORDER BUTTON */
+
+.product-order-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 11px 16px;
+
+    border-radius: 10px;
+    background: var(--primary-blue);
+    color: #ffffff !important;
+
+    font-size: .8rem;
+    font-weight: 800;
+
+    box-shadow: 0 7px 18px rgba(0,102,179,.20);
+    transition: .25s ease;
+}
+
+.product-order-btn span {
+    font-size: 1rem;
+    transition: transform .25s ease;
+}
+
+.product-order-btn:hover {
+    background: var(--deep-blue);
+    transform: translateY(-2px);
+}
+
+.product-order-btn:hover span {
+    transform: translateX(4px);
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    .products-section {
+        padding: 60px 0;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .products-heading {
+        margin-bottom: 35px;
+    }
+
+    .product-item-image {
+        height: 240px;
+    }
+
+    .product-item-content {
+        padding: 20px;
+    }
+
+    .product-item-footer {
+        align-items: center;
+    }
+
+    .product-order-btn {
+        padding: 11px 14px;
+    }
+
+}
+
+
+/* =========================================
+   MIDAX PRODUCT DETAIL PAGE
+========================================= */
+
+.product-page {
+    min-height: calc(100vh - 78px);
+    padding: 65px 0 80px;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(26,143,227,.10), transparent 28%),
+        radial-gradient(circle at 90% 80%, rgba(0,102,179,.08), transparent 30%),
+        #f5f9fc;
+}
+
+/* BACK LINK */
+
+.product-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--deep-blue);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.product-back-link:hover {
+    color: var(--primary-blue);
+}
+
+
+/* MAIN CONTAINER */
+
+.product-detail-card {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 42px;
+
+    max-width: 1120px;
+    margin: auto;
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid rgba(0,63,115,.08);
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 65px rgba(0,63,115,.12);
+}
+
+
+/* IMAGE SIDE */
+
+.product-detail-image {
+    position: sticky;
+    top: 105px;
+    align-self: start;
+
+    padding: 20px;
+
+    border-radius: 22px;
+    background: linear-gradient(145deg, #edf7fd, #ffffff);
+
+    border: 1px solid rgba(0,102,179,.08);
+}
+
+.product-image-frame {
+    min-height: 510px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.product-image-frame img {
+    width: 100%;
+    height: 510px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 20px 22px rgba(0,0,0,.14)
+    );
+
+    transition: transform .35s ease;
+}
+
+.product-image-frame img:hover {
+    transform: scale(1.03);
+}
+
+.product-image-caption {
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--primary-blue);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+
+/* INFORMATION SIDE */
+
+.product-detail-info {
+    padding: 12px 5px 10px;
+}
+
+.product-detail-label {
+    display: inline-flex;
+
+    padding: 7px 12px;
+    margin-bottom: 13px;
+
+    border-radius: 30px;
+
+    background: rgba(0,102,179,.08);
+    color: var(--primary-blue);
+
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.product-detail-info h1 {
+    margin-bottom: 15px;
+
+    color: var(--deep-blue);
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -1.2px;
+}
+
+.product-detail-description {
+    margin-bottom: 25px;
+
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* INFORMATION BOXES */
+
+.product-info-box {
+    margin-bottom: 16px;
+    padding: 19px;
+
+    border: 1px solid rgba(0,63,115,.08);
+    border-radius: 16px;
+
+    background: #fbfdff;
+}
+
+.product-info-box h2 {
+    margin-bottom: 13px;
+
+    color: var(--deep-blue);
+    font-size: 1rem;
+}
+
+.info-row,
+.delivery-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid rgba(0,63,115,.06);
+
+    font-size: .87rem;
+}
+
+.info-row:last-child,
+.delivery-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span,
+.delivery-row span {
+    color: var(--text);
+}
+
+.info-row strong,
+.delivery-row strong {
+    color: var(--deep-blue);
+    text-align: right;
+}
+
+
+/* PRICE */
+
+.price-main {
+    margin-bottom: 8px;
+
+    color: var(--primary-blue);
+    font-size: 1.45rem;
+    font-weight: 900;
+}
+
+.price-main span {
+    color: var(--text);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.pricing-box p {
+    margin-bottom: 0;
+    font-size: .78rem;
+    line-height: 1.6;
+}
+
+
+/* ORDER BOX */
+
+.order-box {
+    margin-top: 22px;
+    padding: 23px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f0f8fe,
+            #ffffff
+        );
+
+    border: 2px solid rgba(0,102,179,.13);
+}
+
+.order-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.order-heading-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: var(--primary-blue);
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+.order-heading h2 {
+    margin: 0 0 3px;
+
+    color: var(--deep-blue);
+    font-size: 1.2rem;
+}
+
+.order-heading p {
+    margin: 0;
+
+    color: var(--text);
+    font-size: .75rem;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--deep-blue);
+
+    font-size: .78rem;
+    font-weight: 800;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d8e2eb;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: var(--dark);
+
+    font-family: inherit;
+    font-size: .86rem;
+
+    outline: none;
+
+    transition: .2s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0,102,179,.08);
+}
+
+
+/* WHATSAPP ORDER BUTTON */
+
+.product-whatsapp-button {
+    width: 100%;
+
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--primary-blue);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 24px rgba(0,102,179,.22);
+
+    transition: .25s ease;
+}
+
+.product-whatsapp-button:hover {
+    background: var(--deep-blue);
+    transform: translateY(-2px);
+}
+
+
+/* FOOTER */
+
+.product-footer {
+    padding: 25px 0;
+
+    background: var(--deep-blue);
+}
+
+.product-footer p {
+    margin: 0;
+
+    color: rgba(255,255,255,.75);
+    text-align: center;
+    font-size: .75rem;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .product-detail-card {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .product-detail-image {
+        position: relative;
+        top: auto;
+    }
+
+    .product-image-frame {
+        min-height: 420px;
+    }
+
+    .product-image-frame img {
+        height: 420px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .product-page {
+        padding: 35px 0 55px;
+    }
+
+    .product-detail-card {
+        width: 94%;
+        padding: 14px;
+        gap: 25px;
+        border-radius: 20px;
+    }
+
+    .product-detail-image {
+        padding: 12px;
+        border-radius: 17px;
+    }
+
+    .product-image-frame {
+        min-height: 320px;
+    }
+
+    .product-image-frame img {
+        height: 320px;
+    }
+
+    .product-detail-info {
+        padding: 4px 3px;
+    }
+
+    .product-detail-info h1 {
+        font-size: 2.1rem;
+    }
+
+    .product-info-box,
+    .order-box {
+        padding: 17px;
+        border-radius: 15px;
+    }
+
+    .info-row,
+    .delivery-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .info-row strong,
+    .delivery-row strong {
+        text-align: left;
+    }
+
+    .order-box {
+        margin-top: 18px;
+    }
+
+}
+
+
+/* =========================================
+   BACKDROP PRODUCT IMAGE GALLERY
+   ========================================= */
+
+.backdrop-gallery {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.backdrop-thumb {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.backdrop-thumb:hover {
+    transform: translateY(-2px);
+}
+
+.backdrop-thumb.active {
+    border-color: var(--primary-blue);
+}
+
+
+/* BACKDROP IMAGE GALLERY */
+
+.backdrop-gallery {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.backdrop-thumb {
+    width: 95px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.backdrop-thumb:hover {
+    transform: translateY(-2px);
+}
+
+.backdrop-thumb.active {
+    border-color: var(--primary-blue);
+}
+
+#backdropMainImage {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+}
+
+
+/* =========================================
+   PRODUCTS CATALOG PAGE
+   ========================================= */
+
+.products-page {
+    padding: 80px 20px;
+}
+
+.products-heading {
+    max-width: 760px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.products-heading h1 {
+    margin: 18px 0 15px;
+}
+
+.products-heading p {
+    line-height: 1.7;
+}
+
+.products-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.catalog-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.catalog-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.catalog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.catalog-content {
+    padding: 25px;
+}
+
+.catalog-content h2 {
+    margin: 10px 0 12px;
+}
+
+.catalog-content p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.catalog-price {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.catalog-price span {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.back-home {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+    .products-page {
+        padding: 55px 15px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-image {
+        height: 270px;
+    }
+
+    .catalog-content {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   BACKDROP IMAGE GALLERY
+   ========================================= */
+
+.backdrop-gallery {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.backdrop-thumb {
+    width: 90px;
+    height: 70px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.backdrop-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.backdrop-thumb:hover {
+    transform: translateY(-2px);
+}
+
+.backdrop-thumb.active {
+    border-color: var(--primary-blue);
+}
+
+#backdropMainImage {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .backdrop-thumb {
+        width: 78px;
+        height: 62px;
+    }
+
+}
+
+
+/* =========================================
+   UNIFIED PRODUCT ORDER BUTTON
+   ========================================= */
+
+.order-submit {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+/* =========================================
+   MIDAX HOMEPAGE — CLEAN DESKTOP LAYOUT
+   Mobile layout remains unchanged
+   ========================================= */
+
+@media (min-width: 851px) {
+
+    .hero-layout {
+        width: min(92%, 1350px);
+        max-width: 1350px;
+        margin: 0 auto;
+        min-height: calc(100vh - 78px);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(430px, 0.85fr);
+        align-items: center;
+        gap: 70px;
+        padding: 50px 0 60px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        max-width: 680px;
+        font-size: clamp(3.2rem, 4.2vw, 4.8rem);
+        line-height: 1.05;
+        margin-bottom: 22px;
+    }
+
+    .hero-description {
+        max-width: 610px;
+        font-size: 1.08rem;
+        line-height: 1.75;
+        margin-bottom: 30px;
+    }
+
+    .hero-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .hero-product {
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 520px;
+        min-height: 540px;
+        margin: 0 auto;
+    }
+
+    .product-image-area {
+        min-height: 350px;
+    }
+
+    .product-image-area img {
+        width: auto;
+        max-width: 92%;
+        max-height: 330px;
+        object-fit: contain;
+    }
+
+    .product-card-bottom {
+        padding: 22px 26px;
+    }
+}
+
+/* =========================================
+   FINAL HOMEPAGE DESKTOP WIDTH FIX
+   ========================================= */
+
+@media (min-width: 851px) {
+
+    #home .hero-layout {
+        width: min(92%, 1350px);
+        max-width: 1350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+/* =========================================
+   MIDAX HOMEPAGE — FINAL RESPONSIVE DESIGN
+   ========================================= */
+
+/* DESKTOP */
+@media (min-width: 851px) {
+
+    #home .hero-layout {
+        width: 94%;
+        max-width: 1500px;
+        min-height: calc(100vh - 78px);
+        margin: 0 auto;
+        padding: 45px 0 55px;
+
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        align-items: center;
+        gap: 70px;
+    }
+
+    #home .hero-content {
+        width: 100%;
+        max-width: 760px;
+    }
+
+    #home .hero-badge {
+        font-size: 0.85rem;
+        padding: 10px 18px;
+        margin-bottom: 24px;
+    }
+
+    #home .hero h1 {
+        max-width: 760px;
+        font-size: clamp(3.8rem, 5vw, 5.8rem);
+        line-height: 1.02;
+        letter-spacing: -2.5px;
+        margin-bottom: 25px;
+    }
+
+    #home .hero-description {
+        max-width: 680px;
+        font-size: 1.2rem;
+        line-height: 1.75;
+        margin-bottom: 35px;
+    }
+
+    #home .hero-actions {
+        gap: 18px;
+    }
+
+    #home .hero-quote-btn {
+        min-height: 62px;
+        padding: 0 30px;
+        font-size: 1.05rem;
+    }
+
+    #home .hero-order-card {
+        min-height: 62px;
+        padding: 9px 17px 9px 11px;
+    }
+
+    #home .order-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    #home .order-text strong {
+        font-size: 1rem;
+    }
+
+    #home .hero-product {
+        width: 100%;
+        min-height: 580px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #home .product-glow {
+        width: 500px;
+        height: 500px;
+    }
+
+    #home .product-card {
+        width: 100%;
+        max-width: 580px;
+        min-height: 590px;
+        padding: 24px;
+        border-radius: 30px;
+    }
+
+    #home .product-image-area {
+        min-height: 410px;
+    }
+
+    #home .product-image-area img {
+        width: auto;
+        max-width: 94%;
+        max-height: 390px;
+        object-fit: contain;
+    }
+
+    #home .product-card-bottom {
+        padding: 24px 4px 4px;
+    }
+
+    #home .product-card-bottom strong {
+        font-size: 1rem;
+    }
+
+    #home .product-card-bottom span {
+        font-size: 0.75rem;
+    }
+}
+
+/* =========================================
+   MIDAX HOMEPAGE — DESKTOP MODE SCALE FIX
+   ========================================= */
+
+@media (min-width: 851px) {
+
+    #home .hero-layout {
+        width: 100%;
+        max-width: none;
+        min-height: calc(100vh - 78px);
+        padding: 45px 5vw 55px;
+
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 4vw;
+        align-items: center;
+    }
+
+    #home .hero-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    #home .hero-badge {
+        font-size: 0.95rem;
+        padding: 11px 20px;
+        margin-bottom: 25px;
+    }
+
+    #home .hero h1 {
+        width: 100%;
+        max-width: none;
+        font-size: clamp(4rem, 6vw, 6.5rem);
+        line-height: 1.02;
+        letter-spacing: -3px;
+        margin-bottom: 25px;
+    }
+
+    #home .hero-description {
+        width: 100%;
+        max-width: 760px;
+        font-size: 1.3rem;
+        line-height: 1.7;
+        margin-bottom: 35px;
+    }
+
+    #home .hero-actions {
+        gap: 20px;
+    }
+
+    #home .hero-quote-btn {
+        min-height: 66px;
+        padding: 0 34px;
+        font-size: 1.1rem;
+    }
+
+    #home .hero-order-card {
+        min-height: 66px;
+        padding: 10px 20px 10px 12px;
+    }
+
+    #home .order-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    #home .order-text strong {
+        font-size: 1.05rem;
+    }
+
+    #home .order-text small {
+        font-size: 0.85rem;
+    }
+
+    #home .hero-product {
+        width: 100%;
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #home .product-glow {
+        width: 560px;
+        height: 560px;
+    }
+
+    #home .product-card {
+        width: 100%;
+        max-width: 650px;
+        min-height: 620px;
+        padding: 26px;
+        border-radius: 32px;
+    }
+
+    #home .product-image-area {
+        min-height: 450px;
+    }
+
+    #home .product-image-area img {
+        width: auto;
+        max-width: 100%;
+        max-height: 430px;
+        object-fit: contain;
+    }
+
+    #home .product-card-bottom {
+        padding: 25px 5px 5px;
+    }
+
+    #home .product-card-bottom strong {
+        font-size: 1.1rem;
+    }
+
+    #home .product-card-bottom span {
+        font-size: 0.85rem;
+    }
+}
+

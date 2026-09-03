@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore professional printing and branding products from Midax Prints House Services.">
+
+    <title>Products | Midax Prints House Services</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+
+        <a href="/" class="logo-link">
+            <img
+                src="{{ url_for('static', filename='images/midax-logo.png') }}"
+                alt="Midax Prints House Services"
+                class="logo">
+        </a>
+
+        <a href="/" class="back-home">
+            ← Home
+        </a>
+
+    </nav>
+</header>
+
+
+<main>
+
+<section class="products-page section">
+
+    <div class="container">
+
+        <div class="products-heading">
+            <span class="hero-badge">
+                MIDAX PRINTS
+            </span>
+
+            <h1>
+                Our Products & Services
+            </h1>
+
+            <p>
+                Explore our professional printing, branding and
+                promotional products. Select a product to view
+                full details, pricing, delivery information and
+                place your order.
+            </p>
+        </div>
+
+
+        <div class="products-grid">
+
+
+            <!-- TOTE BAG -->
+
+            <article class="catalog-card">
+
+                <div class="catalog-image">
+                    <img
+                        src="{{ url_for('static', filename='images/products/sublimation-tote-bag/tote-bag.jpg') }}"
+                        alt="Sublimation Tote Bag">
+                </div>
+
+                <div class="catalog-content">
+
+                    <span class="product-label">
+                        PROMOTIONAL PRODUCTS
+                    </span>
+
+                    <h2>
+                        Sublimation Tote Bag
+                    </h2>
+
+                    <p>
+                        Custom printed tote bags suitable for
+                        businesses, events, gifts, branding and
+                        promotional purposes.
+                    </p>
+
+                    <a
+                        href="/products/sublimation-tote-bag"
+                        class="btn-primary">
+                        View Product
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BACKDROP BANNER -->
+
+            <article class="catalog-card">
+
+                <div class="catalog-image">
+                    <img
+                        src="{{ url_for('static', filename='images/products/backdrop-banner/backdrop.jpg') }}"
+                        alt="10 ft × 10 ft Mounted Backdrop Banner">
+                </div>
+
+                <div class="catalog-content">
+
+                    <span class="product-label">
+                        EVENT & BRANDING
+                    </span>
+
+                    <h2>
+                        Backdrop Banner
+                    </h2>
+
+                    <p>
+                        10 ft × 10 ft printed flex banner,
+                        professionally stretched and mounted
+                        on a sturdy wooden 3D frame.
+                    </p>
+
+                    <div class="catalog-price">
+                        ₦270,000 <span>per set</span>
+                    </div>
+
+                    <a
+                        href="/products/backdrop-banner"
+                        class="btn-primary">
+                        View Product
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+</body>
+</html>

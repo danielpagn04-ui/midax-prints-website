@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Sublimation Tote Bag from Midax Prints House Services. Quality custom printed canvas tote bags for businesses, events, schools and organisations.">
+
+    <title>Sublimation Tote Bag | Midax Prints House Services</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+
+        <a href="/" class="logo-link">
+            <img
+                src="{{ url_for('static', filename='images/midax-logo.png') }}"
+                alt="Midax Prints House Services Logo"
+                class="logo">
+        </a>
+
+        <a href="/" class="product-back-link">
+            ← Back to Home
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="product-page">
+
+    <div class="container">
+
+        <div class="product-detail-card">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-detail-image">
+
+                <div class="product-image-frame">
+
+                    <img
+                        src="{{ url_for('static', filename='images/products/sublimation-tote-bag/tote-bag.jpg') }}"
+                        alt="Sublimation Tote Bag">
+
+                </div>
+
+                <div class="product-image-caption">
+                    <span>QUALITY PRINTING</span>
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-detail-info">
+
+                <span class="product-detail-label">
+                    SUBLIMATION PRINTING
+                </span>
+
+                <h1>Sublimation Tote Bag</h1>
+
+                <p class="product-detail-description">
+                    A quality canvas tote bag suitable for full-colour
+                    sublimation printing. Perfect for businesses, events,
+                    schools, organisations, gifts and promotional branding.
+                </p>
+
+
+                <!-- SPECIFICATIONS -->
+
+                <div class="product-info-box">
+
+                    <h2>Specifications</h2>
+
+                    <div class="info-row">
+                        <span>Material</span>
+                        <strong>Canvas coated material</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Finishing</span>
+                        <strong>Full-colour design print</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- PRICING -->
+
+                <div class="product-info-box pricing-box">
+
+                    <h2>Pricing</h2>
+
+                    <div class="price-main">
+                        From ₦100,000
+                        <span>per 10 pieces</span>
+                    </div>
+
+                    <p>
+                        Final price depends on artwork, finishing and total
+                        quantity. Price will be confirmed before production.
+                    </p>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="product-info-box">
+
+                    <h2>Delivery</h2>
+
+                    <div class="delivery-row">
+                        <strong>Within Abuja</strong>
+                        <span>3–5 working days</span>
+                    </div>
+
+                    <div class="delivery-row">
+                        <strong>Other states in Nigeria</strong>
+                        <span>5–7 working days</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER FORM -->
+
+                <div class="order-box">
+
+                    <div class="order-heading">
+
+                        <span class="order-heading-icon">✦</span>
+
+                        <div>
+                            <h2>Order This Product</h2>
+                            <p>Send your order directly to WhatsApp.</p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="productOrderForm">
+
+                        <div class="form-group">
+
+                            <label for="quantity">
+                                Quantity
+                            </label>
+
+                            <select id="quantity" name="quantity">
+
+                                <option value="10 pieces">
+                                    10 pieces
+                                </option>
+
+                                <option value="20 pieces">
+                                    20 pieces
+                                </option>
+
+                                <option value="30 pieces">
+                                    30 pieces
+                                </option>
+
+                                <option value="50 pieces">
+                                    50 pieces
+                                </option>
+
+                                <option value="100 pieces">
+                                    100 pieces
+                                </option>
+
+                                <option value="Other quantity">
+                                    Other quantity
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter your phone number"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerMessage">
+                                Anything else we should know?
+                            </label>
+
+                            <textarea
+                                id="customerMessage"
+                                rows="4"
+                                placeholder="Tell us about your artwork, event, deadline or other requirements"></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="product-whatsapp-button">
+
+                            <span>Order Now on WhatsApp</span>
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="product-footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Midax Prints House Services.
+            Quality Printing & Branding Solutions.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document
+    .getElementById("productOrderForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const quantity =
+            document.getElementById("quantity").value;
+
+        const name =
+            document.getElementById("customerName").value;
+
+        const phone =
+            document.getElementById("customerPhone").value;
+
+        const message =
+            document.getElementById("customerMessage").value;
+
+
+        const whatsappMessage =
+`Hello Midax Prints House Services,
+
+I would like to order a Sublimation Tote Bag.
+
+Quantity: ${quantity}
+Name: ${name}
+Phone Number: ${phone}
+
+Additional requirements:
+${message || "None"}
+
+Please confirm the final price and production details. Thank you.`;
+
+
+        const whatsappURL =
+            "https://wa.me/2348038195051?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
