@@ -103,14 +103,17 @@
                 </div>
 
                 <div class="product-image-area">
-                    <img
-                        src="{{ url_for('static', filename='images/products/sublimation-tote-bag/tote-bag.jpg') }}"
-                        alt="Midax Prints House Services tote bag"
-                        onerror="this.style.display='none';">
+                    <a id="heroProductLink" href="/products/sublimation-tote-bag">
+                        <img
+                            id="heroProductImage"
+                            src="{{ url_for('static', filename='images/products/sublimation-tote-bag/tote-bag.jpg') }}"
+                            alt="Midax Prints House Services tote bag"
+                            onerror="this.style.display='none';">
+                    </a>
                 </div>
 
                 <div class="product-card-bottom">
-                    <strong>MIDAX PRINTS</strong>
+                    <strong id="heroProductName">MIDAX PRINTS</strong>
                     <span>Creative • Professional • Affordable</span>
                 </div>
 
@@ -577,6 +580,76 @@
 </section>
 
 
+<!-- HOW IT WORKS -->
+
+<section class="how-it-works section">
+
+    <div class="container">
+
+        <p class="section-tag">
+            HOW IT WORKS
+        </p>
+
+        <h2>
+            From Your Idea to the Final Print
+        </h2>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <h3>01. Tell Us What You Need</h3>
+
+                <p>
+                    Share your idea, requirements, quantity and preferred
+                    specifications with our team.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>02. We Create & Confirm</h3>
+
+                <p>
+                    We work with you on the design and confirm the details
+                    before production begins.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>03. We Produce</h3>
+
+                <p>
+                    Your approved design moves into professional printing
+                    and careful finishing.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>04. You Receive</h3>
+
+                <p>
+                    Your completed print materials are prepared for
+                    collection or delivery according to your arrangement.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- WHY CHOOSE MIDAX -->
 
 <section class="why-us section">
@@ -588,18 +661,18 @@
         </p>
 
         <h2>
-            Quality You Can Trust
+            Quality, Creativity & Service You Can Trust
         </h2>
 
         <div class="why-grid">
 
             <div class="why-card">
 
-                <h3>Quality Printing</h3>
+                <h3>Premium Print Quality</h3>
 
                 <p>
-                    We are committed to producing professional
-                    and high-quality print results.
+                    We focus on clean, sharp and professional print
+                    results that give your brand a polished appearance.
                 </p>
 
             </div>
@@ -607,11 +680,11 @@
 
             <div class="why-card">
 
-                <h3>Professional Service</h3>
+                <h3>Professional Craftsmanship</h3>
 
                 <p>
-                    We work closely with our customers to understand
-                    and deliver their printing needs.
+                    Every project is handled with attention to detail,
+                    from the design stage through final production.
                 </p>
 
             </div>
@@ -619,11 +692,11 @@
 
             <div class="why-card">
 
-                <h3>Creative Solutions</h3>
+                <h3>Creative & Custom Solutions</h3>
 
                 <p>
-                    We help transform your ideas into attractive
-                    and effective printed materials.
+                    We turn your ideas into attractive, practical and
+                    memorable designs tailored to your specific needs.
                 </p>
 
             </div>
@@ -631,11 +704,11 @@
 
             <div class="why-card">
 
-                <h3>Customer Satisfaction</h3>
+                <h3>Reliable Customer Service</h3>
 
                 <p>
-                    Your satisfaction remains an important part
-                    of everything we do.
+                    We communicate clearly, understand your requirements
+                    and work to deliver an experience you can rely on.
                 </p>
 
             </div>
@@ -654,15 +727,17 @@
     <div class="container">
 
         <h2>
-            Have a Printing Project?
+            Ready to Bring Your Idea to Life?
         </h2>
 
         <p>
-            Let's discuss your printing and branding needs.
+            From business branding and promotional materials to school
+            books, calendars and custom printing, Midax Prints House
+            Services is ready to turn your ideas into quality finished products.
         </p>
 
         <a href="#contact" class="btn btn-light">
-            Get Started Today
+            Start Your Project
         </a>
 
     </div>
@@ -750,7 +825,22 @@
             class="footer-logo">
 
         <p>
-            Professional Printing and Branding Solutions.
+            Professional Printing & Branding Solutions
+            for Businesses, Schools, Events and Individuals.
+        </p>
+
+        <nav class="footer-links" aria-label="Footer Navigation">
+
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="/products">Products</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <p>
+            Quality. Creativity. Professional Service.
         </p>
 
         <p class="copyright">
