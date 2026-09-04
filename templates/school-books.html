@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Custom School Books from Midax Prints House Services. Quality school exercise books available in 40, 60 and 80 leaves, with short-note and long-note options.">
+
+    <title>Custom School Books | Midax Prints House Services</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+
+        <a href="/" class="logo-link">
+            <img
+                src="{{ url_for('static', filename='images/midax-logo.png') }}"
+                alt="Midax Prints House Services Logo"
+                class="logo">
+        </a>
+
+        <a href="/products" class="product-back-link">
+            ← Back to Products
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="product-page">
+
+    <div class="container">
+
+        <div class="product-detail-card">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-detail-image">
+
+                <div class="product-image-frame">
+
+                    <img
+                        src="{{ url_for('static', filename='images/products/school-books/school-books.webp') }}"
+                        alt="Custom School Books">
+
+                </div>
+
+                <div class="product-image-caption">
+                    <span>QUALITY SCHOOL BOOKS</span>
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-detail-info">
+
+                <span class="product-detail-label">
+                    SCHOOL BOOKS & PRINTING
+                </span>
+
+                <h1>Custom School Books</h1>
+
+                <p class="product-detail-description">
+                    Quality custom school books professionally produced for
+                    schools, students, organisations and educational projects.
+                    Available in different leaf counts and note formats to
+                    suit your printing requirements.
+                </p>
+
+
+                <!-- SPECIFICATIONS -->
+
+                <div class="product-info-box">
+
+                    <h2>Specifications</h2>
+
+                    <div class="info-row">
+                        <span>Product</span>
+                        <strong>Custom school exercise book</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Options</span>
+                        <strong>40, 60 and 80 leaves</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- PRICING -->
+
+                <div class="product-info-box pricing-box">
+
+                    <h2>Pricing</h2>
+
+                    <div class="price-main">
+                        From ₦500
+                        <span>per book</span>
+                    </div>
+
+                    <p>
+                        Pricing varies by leaf count and note format:
+                        40 leaves – ₦500 each; 60 leaves – ₦600 each;
+                        80 leaves short note – ₦700 each; 80 leaves long
+                        note – ₦900 each. Final quantity and customization
+                        requirements will be confirmed before production.
+                    </p>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="product-info-box">
+
+                    <h2>Delivery</h2>
+
+                    <div class="delivery-row">
+                        <strong>Within Abuja</strong>
+                        <span>3–5 working days</span>
+                    </div>
+
+                    <div class="delivery-row">
+                        <strong>Other states in Nigeria</strong>
+                        <span>5–7 working days</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER FORM -->
+
+                <div class="order-box">
+
+                    <div class="order-heading">
+
+                        <span class="order-heading-icon">✦</span>
+
+                        <div>
+                            <h2>Order This Product</h2>
+                            <p>Send your order directly to WhatsApp.</p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="productOrderForm">
+
+                        <div class="form-group">
+
+                            <label for="quantity">
+                                Quantity
+                            </label>
+
+                            <select id="quantity" name="quantity">
+
+                                <option value="40 leaves">
+                                    40 leaves — ₦500 each
+                                </option>
+
+                                <option value="60 leaves">
+                                    60 leaves — ₦600 each
+                                </option>
+
+                                <option value="80 leaves - Short Note">
+                                    80 leaves — Short Note — ₦700 each
+                                </option>
+
+                                <option value="80 leaves - Long Note">
+                                    80 leaves — Long Note — ₦900 each
+                                </option>
+
+                                <option value="Other quantity">
+                                    Other quantity
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter your phone number"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerMessage">
+                                Anything else we should know?
+                            </label>
+
+                            <textarea
+                                id="customerMessage"
+                                rows="4"
+                                placeholder="Tell us your preferred leaf count, note format, quantity, school name or other requirements"></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="product-whatsapp-button">
+
+                            <span>Order Now on WhatsApp</span>
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="product-footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Midax Prints House Services.
+            Quality Printing & Branding Solutions.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document
+    .getElementById("productOrderForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const quantity =
+            document.getElementById("quantity").value;
+
+        const name =
+            document.getElementById("customerName").value;
+
+        const phone =
+            document.getElementById("customerPhone").value;
+
+        const message =
+            document.getElementById("customerMessage").value;
+
+
+        const whatsappMessage =
+`Hello Midax Prints House Services,
+
+I would like to order Custom School Books.
+
+Quantity: ${quantity}
+Name: ${name}
+Phone Number: ${phone}
+
+Additional requirements:
+${message || "None"}
+
+Please confirm the final price and production details. Thank you.`;
+
+
+        const whatsappURL =
+            "https://wa.me/2348038195051?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+</script>
+
+</body>
+</html>

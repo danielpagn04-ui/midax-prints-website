@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Custom Signage from Midax Prints House Services. Professional signage solutions for businesses, shops, offices, organisations and commercial spaces.">
+
+    <title>Custom Signage | Midax Prints House Services</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+
+        <a href="/" class="logo-link">
+            <img
+                src="{{ url_for('static', filename='images/midax-logo.png') }}"
+                alt="Midax Prints House Services Logo"
+                class="logo">
+        </a>
+
+        <a href="/products" class="product-back-link">
+            ← Back to Products
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="product-page">
+
+    <div class="container">
+
+        <div class="product-detail-card">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-detail-image">
+
+                <div class="signage-slider">
+
+                    <div class="signage-slide active">
+                        <img
+                            src="{{ url_for('static', filename='images/products/signage/signage-1.jpg') }}"
+                            alt="Custom Signage - Illuminated Round Signage">
+                    </div>
+
+                    <div class="signage-slide">
+                        <img
+                            src="{{ url_for('static', filename='images/products/signage/signage-2.jpg') }}"
+                            alt="Custom Signage - Rectangular Business Sign">
+                    </div>
+
+                    <div class="signage-dots">
+                        <button type="button" class="signage-dot active" aria-label="Show signage image 1"></button>
+                        <button type="button" class="signage-dot" aria-label="Show signage image 2"></button>
+                    </div>
+
+                </div>
+
+                <div class="product-image-caption">
+                    <span>BUSINESS SIGNAGE</span>
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-detail-info">
+
+                <span class="product-detail-label">
+                    BUSINESS SIGNAGE & BRANDING
+                </span>
+
+                <h1>Custom Signage</h1>
+
+                <p class="product-detail-description">
+                    Professional custom signage designed to give your business
+                    a strong, attractive and professional presence. Suitable
+                    for shops, offices, businesses, organisations and other
+                    commercial spaces.
+                </p>
+
+
+                <!-- SPECIFICATIONS -->
+
+                <div class="product-info-box">
+
+                    <h2>Specifications</h2>
+
+                    <div class="info-row">
+                        <span>Style</span>
+                        <strong>Custom business signage</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Options</span>
+                        <strong>Different shapes, finishes and designs</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Suitable for</span>
+                        <strong>Shops, offices, businesses & organisations</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- PRICING -->
+
+                <div class="product-info-box pricing-box">
+
+                    <h2>Pricing</h2>
+
+                    <div class="price-main">
+                        From ₦150,000
+                        <span>per signage</span>
+                    </div>
+
+                    <p>
+                        Final price depends on the size, design, finishing and other
+                        production requirements. Price will be confirmed before production.
+                    </p>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="product-info-box">
+
+                    <h2>Delivery</h2>
+
+                    <div class="delivery-row">
+                        <strong>Within Abuja</strong>
+                        <span>3–5 working days</span>
+                    </div>
+
+                    <div class="delivery-row">
+                        <strong>Other states in Nigeria</strong>
+                        <span>5–7 working days</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER FORM -->
+
+                <div class="order-box">
+
+                    <div class="order-heading">
+
+                        <span class="order-heading-icon">✦</span>
+
+                        <div>
+                            <h2>Order This Product</h2>
+                            <p>Send your order directly to WhatsApp.</p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="productOrderForm">
+
+                        <div class="form-group">
+
+                            <label for="quantity">
+                                Quantity
+                            </label>
+
+                            <select id="quantity" name="quantity">
+
+                                <option value="1 signage">
+                                    1 signage
+                                </option>
+
+                                <option value="2 signages">
+                                    2 signages
+                                </option>
+
+                                <option value="3 signages">
+                                    3 signages
+                                </option>
+
+                                <option value="5 signages">
+                                    5 signages
+                                </option>
+
+                                <option value="10 signages">
+                                    10 signages
+                                </option>
+
+                                <option value="Other quantity">
+                                    Other quantity
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter your phone number"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerMessage">
+                                Anything else we should know?
+                            </label>
+
+                            <textarea
+                                id="customerMessage"
+                                rows="4"
+                                placeholder="Tell us about your preferred size, design, lighting, location or other requirements"></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="product-whatsapp-button">
+
+                            <span>Order Now on WhatsApp</span>
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="product-footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Midax Prints House Services.
+            Quality Printing & Branding Solutions.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document
+    .getElementById("productOrderForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const quantity =
+            document.getElementById("quantity").value;
+
+        const name =
+            document.getElementById("customerName").value;
+
+        const phone =
+            document.getElementById("customerPhone").value;
+
+        const message =
+            document.getElementById("customerMessage").value;
+
+
+        const whatsappMessage =
+`Hello Midax Prints House Services,
+
+I would like to order Custom Signage.
+
+Quantity: ${quantity}
+Name: ${name}
+Phone Number: ${phone}
+
+Additional requirements:
+${message || "None"}
+
+Please confirm the final price and production details. Thank you.`;
+
+
+        const whatsappURL =
+            "https://wa.me/2348038195051?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
+
+<style>
+.signage-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.signage-slide {
+    display: none;
+    width: 100%;
+}
+
+.signage-slide.active {
+    display: block;
+}
+
+.signage-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.signage-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.signage-dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.signage-dot.active {
+    background: #111;
+}
+
+@media (max-width: 600px) {
+    .signage-slider {
+        border-radius: 10px;
+    }
+
+    .signage-slide img {
+        width: 100%;
+        max-height: 420px;
+        object-fit: contain;
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".signage-slide");
+    const dots = document.querySelectorAll(".signage-dot");
+
+    if (slides.length < 2) return;
+
+    let current = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+        });
+
+        current = index;
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", function () {
+            showSlide(index);
+        });
+    });
+
+    let startX = 0;
+
+    const slider = document.querySelector(".signage-slider");
+
+    slider.addEventListener("touchstart", function (event) {
+        startX = event.touches[0].clientX;
+    }, { passive: true });
+
+    slider.addEventListener("touchend", function (event) {
+        const endX = event.changedTouches[0].clientX;
+        const difference = startX - endX;
+
+        if (Math.abs(difference) > 50) {
+            if (difference > 0) {
+                showSlide((current + 1) % slides.length);
+            } else {
+                showSlide((current - 1 + slides.length) % slides.length);
+            }
+        }
+    }, { passive: true });
+
+    setInterval(function () {
+        showSlide((current + 1) % slides.length);
+    }, 5000);
+});
+</script>
+

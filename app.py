@@ -36,6 +36,22 @@ def branded_tshirt():
 def rollup_banner():
     return render_template("rollup-banner.html")
 
+@app.route("/products/signage")
+def signage():
+    return render_template("signage.html")
+
+@app.route("/products/wall-calendar")
+def wall_calendar():
+    return render_template("wall-calendar.html")
+
+@app.route("/products/table-calendar")
+def table_calendar():
+    return render_template("table-calendar.html")
+
+@app.route("/products/school-books")
+def school_books():
+    return render_template("school-books.html")
+
 @app.route("/products/backdrop-banner")
 def backdrop_banner():
     return render_template("backdrop.html")
