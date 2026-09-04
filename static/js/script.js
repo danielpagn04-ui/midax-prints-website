@@ -65,49 +65,57 @@ if (heroProductImage && heroProductName && heroProductLink) {
     const heroProducts = [
         {
             name: 'SUBLIMATION TOTE BAG',
-            image: "/static/images/products/sublimation-tote-bag/tote-bag.jpg",
+            image: '/static/images/products/sublimation-tote-bag/tote-bag.jpg',
             alt: 'Midax Prints House Services sublimation tote bag',
             link: '/products/sublimation-tote-bag'
         },
         {
             name: 'BRANDED T-SHIRTS',
-            image: "/static/images/products/branded-tshirt/branded-tshirt.webp",
+            image: '/static/images/products/branded-tshirt/branded-tshirt.webp',
             alt: 'Midax Prints House Services branded T-shirts',
             link: '/products/branded-tshirt'
         },
         {
             name: 'ROLL-UP BANNER',
-            image: "/static/images/products/rollup-banner/rollup.webp",
+            image: '/static/images/products/rollup-banner/rollup.webp',
             alt: 'Midax Prints House Services roll-up banner',
             link: '/products/rollup-banner'
         },
         {
             name: 'WALL CALENDAR',
-            image: "/static/images/products/wall-calendar/wall-calendar.jpg",
+            image: '/static/images/products/wall-calendar/wall-calendar.jpg',
             alt: 'Midax Prints House Services wall calendar',
             link: '/products/wall-calendar'
         }
     ];
 
+    /* Preload all hero images */
+    heroProducts.forEach(product => {
+        const image = new Image();
+        image.src = product.image;
+    });
+
     let heroProductIndex = 0;
 
     setInterval(() => {
 
+        heroProductIndex =
+            (heroProductIndex + 1) % heroProducts.length;
+
+        const product = heroProducts[heroProductIndex];
+
         heroProductImage.style.opacity = '0';
 
         setTimeout(() => {
-
-            heroProductIndex =
-                (heroProductIndex + 1) % heroProducts.length;
-
-            const product = heroProducts[heroProductIndex];
 
             heroProductImage.src = product.image;
             heroProductImage.alt = product.alt;
             heroProductName.textContent = product.name;
             heroProductLink.href = product.link;
 
-            heroProductImage.style.opacity = '1';
+            heroProductImage.onload = () => {
+                heroProductImage.style.opacity = '1';
+            };
 
         }, 350);
 
