@@ -18,6 +18,28 @@ def sublimation_tote_bag():
     return render_template("product.html")
 
 
+@app.route("/products/face-caps")
+def face_caps():
+    return render_template("face-caps.html")
+
+@app.route("/products/wall-clock")
+def wall_clock():
+    return render_template("wall-clock.html")
+
+@app.route("/products/polymer")
+def polymer():
+    return render_template("polymer.html")
+
+@app.route("/products/towel")
+def towel():
+    return render_template("towel.html")
+
+
+@app.route("/products/jotter-design")
+def jotter_design():
+    return render_template("jotter-design.html")
+
+
 
 
 
