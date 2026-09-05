@@ -18,6 +18,15 @@ def sublimation_tote_bag():
     return render_template("product.html")
 
 
+
+@app.route("/products/magic-cup")
+def magic_cup():
+    return render_template("magic-cup.html")
+
+@app.route("/products/envelopes")
+def envelopes():
+    return render_template("envelopes.html")
+
 @app.route("/products/face-caps")
 def face_caps():
     return render_template("face-caps.html")
@@ -77,6 +86,10 @@ def school_books():
 @app.route("/products/backdrop-banner")
 def backdrop_banner():
     return render_template("backdrop.html")
+
+@app.route("/products/paper-bags")
+def paper_bags():
+    return render_template("paper-bags.html")
 
 if __name__ == "__main__":
     app.run(
