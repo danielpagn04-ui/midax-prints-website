@@ -2650,3 +2650,27 @@ p {
         padding: 24px 28px;
     }
 }
+
+/* WhatsApp button icon alignment */
+.product-whatsapp-button .whatsapp-button-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.product-whatsapp-button .whatsapp-button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+}
+
+.product-whatsapp-button .whatsapp-button-icon svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
