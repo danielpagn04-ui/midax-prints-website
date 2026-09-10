@@ -91,6 +91,31 @@ def backdrop_banner():
 def paper_bags():
     return render_template("paper-bags.html")
 
+
+@app.route("/products/a4-portrait-brochure")
+def a4_portrait_brochure():
+    return render_template("a4-portrait-brochure.html")
+
+@app.route("/products/trifold-brochure")
+def trifold_brochure():
+    return render_template("trifold-brochure.html")
+
+@app.route("/products/a4-landscape-brochure")
+def a4_landscape_brochure():
+    return render_template("a4-landscape-brochure.html")
+
+@app.route("/products/funeral-brochure")
+def funeral_brochure():
+    return render_template("funeral-brochure.html")
+
+@app.route("/products/campaign-poster")
+def campaign_poster():
+    return render_template("campaign-poster.html")
+
+@app.route("/products/delish-treats-complimentary-card")
+def delish_treats_complimentary_card():
+    return render_template("delish-treats-complimentary-card.html")
+
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Funeral Brochure from Midax Prints House Services. Professional printing and branding services.">
+    <title>Funeral Brochure | Midax Prints House Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+        <a href="/" class="logo-link">
+            <img src="{{ url_for('static', filename='images/midax-logo.png') }}" alt="Midax Prints House Services Logo" class="logo">
+        </a>
+
+        <a href="/products" class="product-back-link">
+            ← Back to Products
+        </a>
+    </nav>
+</header>
+
+<main class="product-page">
+    <div class="container">
+        <div class="product-detail-card">
+
+            <div class="product-detail-image">
+                <div class="product-image-frame">
+                    <img src="{{ url_for('static', filename='images/products/brochures/funeral-brochure.png') }}" alt="Funeral Brochure">
+                </div>
+
+                <div class="product-image-caption">
+                    <span>QUALITY PRINTING</span>
+                    <span>✦</span>
+                </div>
+            </div>
+
+            <div class="product-detail-info">
+
+                <span class="product-detail-label">
+                    MEMORIAL PRINTING
+                </span>
+
+                <h1>Funeral Brochure</h1>
+
+                <p class="product-detail-description">
+                    A beautifully arranged memorial programme created to honour and preserve the memories of a loved one with dignity and elegance.
+                </p>
+
+                <div class="product-info-box">
+                    <h2>Specifications</h2>
+
+                    <div class="info-row">
+                        <span>Service</span>
+                        <strong>Professional printing</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Quality</span>
+                        <strong>Full-colour print &amp; professional finishing</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Details</span>
+                        <strong>23-page memorial programme professionally arranged and printed with care, dignity and an elegant presentation suitable for funeral and remembrance ceremonies.</strong>
+                    </div>
+                </div>
+
+                <div class="product-info-box pricing-box">
+                    <h2>Pricing</h2>
+
+                    <div class="price-main">
+                        ₦745,000
+                        <span>per 100 copies</span>
+                    </div>
+
+                    <p>
+                        Final artwork, customization and production requirements
+                        will be confirmed before production.
+                    </p>
+                </div>
+
+                <div class="product-info-box">
+                    <h2>Delivery</h2>
+
+                    <div class="delivery-row">
+                        <strong>Within Abuja</strong>
+                        <span>3–5 working days</span>
+                    </div>
+
+                    <div class="delivery-row">
+                        <strong>Other states in Nigeria</strong>
+                        <span>5–7 working days</span>
+                    </div>
+                </div>
+
+                <div class="order-box">
+
+                    <div class="order-heading">
+                        <span class="order-heading-icon">✦</span>
+
+                        <div>
+                            <h2>Order This Product</h2>
+                            <p>Send your order directly to WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <form id="productOrderForm">
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+
+                            <select id="quantity" name="quantity">
+                                <option value="100 copies">100 copies</option>
+                                <option value="200 copies">200 copies</option>
+                                <option value="300 copies">300 copies</option>
+                                <option value="500 copies">500 copies</option>
+                                <option value="Other quantity">Other quantity</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerName">Your Name</label>
+
+                            <input type="text" id="customerName"
+                                   placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number</label>
+
+                            <input type="tel" id="customerPhone"
+                                   placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerMessage">
+                                Additional Requirements
+                            </label>
+
+                            <textarea id="customerMessage"
+                                      placeholder="Tell us any additional requirements"></textarea>
+                        </div>
+
+                        <button type="submit" class="product-whatsapp-button">
+                            <span class="whatsapp-button-content">
+                                <span>Order Now on WhatsApp</span>
+                                <span>→</span>
+                            </span>
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="product-footer">
+    <div class="container">
+        <p>
+            © 2026 Midax Prints House Services.
+            Quality Printing &amp; Branding Solutions.
+        </p>
+    </div>
+</footer>
+
+<script>
+document
+    .getElementById("productOrderForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const quantity =
+            document.getElementById("quantity").value;
+
+        const name =
+            document.getElementById("customerName").value;
+
+        const phone =
+            document.getElementById("customerPhone").value;
+
+        const message =
+            document.getElementById("customerMessage").value;
+
+        const whatsappMessage =
+`Hello Midax Prints House Services,
+
+I would like to order a Funeral Brochure.
+
+Quantity: ${quantity}
+Name: ${name}
+Phone Number: ${phone}
+
+Additional requirements:
+${message || "None"}
+
+Please confirm the final price and production details. Thank you.`;
+
+        const whatsappURL =
+            "https://wa.me/2348038195051?text=" +
+            encodeURIComponent(whatsappMessage);
+
+        window.open(whatsappURL, "_blank");
+
+    });
+</script>
+
+</body>
+</html>
